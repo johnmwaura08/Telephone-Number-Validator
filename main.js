@@ -28,6 +28,19 @@ function telephoneCheck(str) {
                /^1\(\d{3}\) \d{3}-\d{4}$/,  //we're also escaping parenthsesis by putting backslash before each one. Parenthesis mean somthing different in regex
 
           //5555555555
+               /^\d{10}$/ ,
+
+           //    (555) 555-5555
+           /\(\d{3}\)\d{3}-\d{4}/ ,
+
+           // 1 555 555 5555
+
+           /1 \d{3} \d{3} \d{4}/,
+
+           //1(555)555-5555
+
+           /1\(\d{3}\)\d{3}-\d{4}/
+
 
 
 
