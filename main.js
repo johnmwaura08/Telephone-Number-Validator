@@ -15,5 +15,24 @@ The user may fill out the form field any way they choose as long as it has the f
 
 function telephoneCheck(str) {
 
-    
+
+    const validPatterns = [
+
+        // 555-555-555
+        /^\d{3}-\d{3}-\d{4}$/,
+
+        //1 555-555-5555
+            /^1\d{3}-\d{3}-\d{4}$/,
+
+         //1 (555) 555-5555
+               /^1\(\d{3}\) \d{3}-\d{4}$/,  //we're also escaping parenthsesis by putting backslash before each one. Parenthesis mean somthing different in regex
+
+          //5555555555
+
+
+
+    ]
+
+    return validPatterns.some((pattern) => pattern.test(str))
+
 }
